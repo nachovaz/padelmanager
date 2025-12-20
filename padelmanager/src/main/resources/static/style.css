@@ -1,0 +1,26 @@
+header {
+    background-color: #03273c;
+    color: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+h1 {
+    margin: 0; 
+    padding-right: 10px; /* Space between text and line */
+    padding-left: 10px;
+}
+
+body {
+    background-color: #03273c;
+}
+
+.vertical-line {
+    border-left: 2px solid white;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
