@@ -10,17 +10,21 @@ header {
 }
 
 .choice-menu {
-    display: block;
-    width: 60%;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.5px solid #FFFFFF;
+
 }
 
 .btn {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+    display: inline-block;
+    background-color: #03273c;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    height: 50px;
+    width: 200px;
+    color: #FFFFFF;
+
 }
 
 
