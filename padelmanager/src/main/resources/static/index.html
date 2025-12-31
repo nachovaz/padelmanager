@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pecorino</title>
-    <script src="index.js" defer></script> //investigar el uso de defer en el proceso de carga
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
         <h1>Pecorino</h1> <div class="vertical-line"></div> <h1>a padel manager app</h1>
     </header>
     <div class="choice-menu">
-        <button class="btn" onclick="loadHome('home')">Home</button>
-        <button class="btn" onclick="loadPlayers('players')">Players</button>
-        <button class="btn" onclick="loadCalendar('calendar')">Calendar</button>
-        <button class="btn" onclick="loadMatchHistory('match-history')">Match history</button>
+        <button class="btn" id="home-button" onclick="loadSection('home')">Home</button>
+        <button class="btn" id="players-button" onclick="loadSection('players')">Players</button>
+        <button class="btn" id="calendar-button" onclick="loadSection('calendar')">Calendar</button>
+        <button class="btn" id="match-history-button" onclick="loadSection('match-history')">Match history</button>
     </div>
 
     <main id="section-content">
