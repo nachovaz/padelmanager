@@ -11,7 +11,7 @@ header {
 
 .choice-menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     border-bottom: 0.5px solid #FFFFFF;
 
 }
@@ -19,12 +19,12 @@ header {
 .btn {
     display: inline-block;
     background-color: #03273c;
-    border-left: 2px solid #FFFFFF;
-    border-right: 2px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
     height: 50px;
     width: 200px;
     color: #FFFFFF;
-
+    margin: 0px;
 }
 
 
