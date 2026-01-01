@@ -3,6 +3,7 @@ header {
     color: #FFFFFF;
     border-bottom: 0.5px solid #FFFFFF;
     padding: 10px;
+    padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     align-items: center;
@@ -10,7 +11,7 @@ header {
 }
 
 body {
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-image: linear-gradient(to top, #03273c 0%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -19,8 +20,8 @@ body {
 .choice-menu {
     display: flex;
     justify-content: center;
-    background-color: #03273c;
-    border-bottom: 0.5px solid #FFFFFF;
+    background-color: #000000;
+    border-bottom: 0px;
 
 }
 
@@ -51,12 +52,29 @@ h1 {
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
     text-align: center;
-    padding: 10px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
     border-bottom: 1px solid white
+}
+
+th {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+tr:last-child td {
+    border-bottom: none;
 }
