@@ -14,7 +14,8 @@ function loadSection (section) {
             sectionContent.innerHTML = '<h2>Players</h2>';
             break;
         case 'calendar':
-            sectionContent.innerHTML = '<h2>Calendar</h2>';
+            const template = document.getElementById("calendar-section-template");
+            sectionContent.appendChild(template.content.cloneNode(true));
             break;
         case 'match-history':
             sectionContent.innerHTML = '<h2>Match history</h2>';
