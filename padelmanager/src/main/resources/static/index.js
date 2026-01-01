@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    loadSection("home");
 });
-
 function loadSection (section) {
     const sectionContent = document.getElementById('section-content');
     sectionContent.innerHTML = '';
