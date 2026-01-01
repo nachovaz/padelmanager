@@ -9,9 +9,17 @@ header {
     justify-content: flex-end;
 }
 
+body {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
 .choice-menu {
     display: flex;
     justify-content: center;
+    background-color: #03273c;
     border-bottom: 0.5px solid #FFFFFF;
 
 }
@@ -34,14 +42,21 @@ h1 {
     padding-left: 10px;
 }
 
-body {
-    background-color: #03273c;
-}
-
 .vertical-line {
     border-left: 2px solid white;
     height: 30px;
     margin-left: 10px;
     margin-right: 10px;
     display: inline-block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid white
 }
