@@ -6,6 +6,16 @@ function loadSection (section) {
     const sectionContent = document.getElementById('section-content');
     sectionContent.innerHTML = '';
 
+    const allButtons = document.querySelectorAll('.btn');
+    allButtons.forEach(function(button) {
+        button.classList.remove("active");
+    });
+
+    const activeButton = document.getElementById(`${section}-button`);
+    if (activeButton) {
+        activeButton.classList.add("active");
+    }
+
     switch(section) {
         case "home":
             sectionContent.innerHTML = "<h2>Home</h2>";

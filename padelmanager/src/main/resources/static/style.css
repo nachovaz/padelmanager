@@ -30,13 +30,24 @@ body {
     background-color: transparent;
     border: none;
     height: 50px;
-    width: 200px;
+    flex: 1;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     margin: 0px;
 }
 
+.btn:hover {
+    cursor: pointer;
+    background-color: none;
+    color: #FFFFFF;
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+.btn.active {
+    background-color: #FFFFFF;
+    color: #03273c;
+}
 
 h1 {
     margin: 0;
@@ -53,7 +64,7 @@ h1 {
 }
 
 table {
-    width: 80%;
+    width: 1500px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0;
