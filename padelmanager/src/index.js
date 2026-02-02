@@ -21,7 +21,8 @@ function loadSection (section) {
             sectionContent.innerHTML = "<h2>Home</h2>";
             break;
         case "players":
-            sectionContent.innerHTML = "<h2>Players</h2>";
+            const playersTemplate = document.getElementById("players-section-template");
+            sectionContent.appendChild(playersTemplate.content.cloneNode(true));
             break;
         case "calendar":
             const template = document.getElementById("calendar-section-template");

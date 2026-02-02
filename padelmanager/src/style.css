@@ -11,7 +11,7 @@ header {
 }
 
 body {
-    background-image: linear-gradient(to top, #000000 0%, #03273c 100%);
+    background-image: linear-gradient(to top, #000000 0%, #464544 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -29,6 +29,7 @@ body {
     display: inline-block;
     background-color: transparent;
     border: none;
+    border-bottom: 0.5px solid #FFFFFF;
     height: 50px;
     flex: 1;
     color: #FFFFFF;
@@ -65,29 +66,26 @@ h1 {
 
 table {
     width: 1500px;
-    margin: 0 auto;
+    margin: 250px auto;
     border-collapse: separate;
     border-spacing: 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(205, 205, 204);
     border-radius: 10px;
     overflow: hidden;
 }
 
 th, td {
     text-align: center;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
+    color: #6b6a6a;
+    padding: 10px 60px;
     border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
 th {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-weight:bold;
-    font-size: 20px;
+    padding: 30px 60px;
+    color: #5e5e5e
+    font-weight:extra-bold;
+    font-size: 30px;
 }
 tr:last-child td {
     border-bottom: none;
