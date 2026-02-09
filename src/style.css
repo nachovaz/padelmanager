@@ -1,7 +1,26 @@
-header {
-    background-color: #03273c;
-    color: #FFFFFF;
-    border-bottom: 0.5px solid #FFFFFF;
+/*
+--bright-lemon: #f6ea00ff; rgb(246, 234, 0)
+--dry-sage: #b4b16bff; rgb(180, 177, 107)
+--graphite: #313030ff; rgb(49, 48, 48)
+--charcoal: #484848ff; rgb(72, 72, 72)
+--silver: #a5a4a4ff; rgb(165, 164, 164)
+--silver-2: #bcbebdff; rgb(188, 190, 189)
+--alabaster-grey: #e6e6e6ff; rgb(230, 230, 230)
+*/
+
+body {
+    background: linear-gradient(to bottom, rgba(205, 205, 204, 1) 80%, rgb(0, 0, 0, 0.3) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+#header-title{
+    background-color: #313030;
+    color: #e6e6e6ff;
+    border-bottom: 0px solid #FFFFFF;
     padding: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -10,17 +29,10 @@ header {
     justify-content: flex-end;
 }
 
-body {
-    background-image: linear-gradient(to top, #000000 0%, #464544 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    margin: 0;
-}
 .choice-menu {
     display: flex;
     justify-content: space-evenly;
-    background-color: transparent;
+    background-color: rgb(49, 48, 48, 0.85);
     border-bottom: 0px solid #FFFFFF;
 
 }
@@ -29,10 +41,10 @@ body {
     display: inline-block;
     background-color: transparent;
     border: none;
-    border-bottom: 0.5px solid #FFFFFF;
+    border-bottom: 0;
     height: 50px;
     flex: 1;
-    color: #FFFFFF;
+    color: #e6e6e6ff;
     font-size: 16px;
     font-weight: bold;
     margin: 0px;
@@ -42,22 +54,22 @@ body {
     cursor: pointer;
     background-color: none;
     color: #FFFFFF;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: inset 0 0 10px #e6e6e6ff;
 }
 
 .btn.active {
-    background-color: #FFFFFF;
-    color: #03273c;
+    background-color: rgb(246, 234, 0);
+    color: #313030;
 }
 
 h1 {
     margin: 0;
-    padding-right: 10px; /* Space between text and line */
+    padding-right: 10px;
     padding-left: 10px;
 }
 
 .vertical-line {
-    border-left: 2px solid white;
+    border-left: 2px solid #e6e6e6ff;
     height: 30px;
     margin-left: 10px;
     margin-right: 10px;
@@ -69,21 +81,22 @@ table {
     margin: 250px auto;
     border-collapse: separate;
     border-spacing: 0;
-    background: rgba(205, 205, 204);
+    background: rgba(205, 205, 204, 1);
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 0 10px #313030;
 }
 
 th, td {
     text-align: center;
-    color: #6b6a6a;
+    color: #484848ff;
     padding: 10px 60px;
     border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
 th {
     padding: 30px 60px;
-    color: #5e5e5e
+    color:#313030;
     font-weight:extra-bold;
     font-size: 30px;
 }
