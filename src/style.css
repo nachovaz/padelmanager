@@ -9,6 +9,19 @@
 --alabaster-grey: #e6e6e6ff; rgb(230, 230, 230)
 */
 
+
+
+/* Global Styles */
+
+p {}
+h1 {
+    margin: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+h2{}
+h3{}
+
 body {
     background-color: #03071e;
     opacity: 1;
@@ -24,16 +37,52 @@ body {
     margin: 0;
 }
 
+table {
+    width: 80vw;
+    max-width: 1920px;
+    margin: 5em auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(205, 205, 204, 1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #313030;
+}
+
+th, td {
+    text-align: center;
+    color: #484848ff;
+    padding: 1em 1.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+th {
+    padding: 1em 1em;
+    color: #313030;
+    font-weight: extra-bold;
+    font-size: 30px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* Header and Navigation */
+
+
 #header-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-color: #313030;
     color: #e6e6e6ff;
     border-bottom: 0px solid #ffffff;
     padding: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+
 }
 
 .nav-bar {
@@ -68,11 +117,7 @@ body {
     color: #313030;
 }
 
-h1 {
-    margin: 0;
-    padding-right: 10px;
-    padding-left: 10px;
-}
+
 
 .vertical-line {
     border-left: 2px solid #e6e6e6ff;
@@ -82,32 +127,23 @@ h1 {
     display: inline-block;
 }
 
-table {
-    width: 80vw;
-    max-width: 1920px;
-    margin: 5em auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: rgba(205, 205, 204, 1);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px #313030;
+
+/* Home Section */
+
+.home-container {
+    display: grid;
 }
 
-th,
-td {
-    text-align: center;
-    color: #484848ff;
-    padding: 1em 1.5em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+.home-container h1{
+    font-size: 6rem;
+    color: rgb(246, 234, 0);
 }
 
-th {
-    padding: 30px 60px;
-    color: #313030;
-    font-weight: extra-bold;
-    font-size: 30px;
-}
-tr:last-child td {
-    border-bottom: none;
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-;
 }
