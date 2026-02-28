@@ -1,35 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
+function loadSection(section) {
+  const sectionContent = document.getElementById("section-content");
+  sectionContent.innerHTML = "";
 
-});
+  const allButtons = document.querySelectorAll(".nav-btn");
+  allButtons.forEach(function (button) {
+    button.classList.remove("active");
+  });
 
-function loadSection (section) {
-    const sectionContent = document.getElementById('section-content');
-    sectionContent.innerHTML = '';
+  
+  const activeButton = document.getElementById(`${section}-button`);
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
 
-    const allButtons = document.querySelectorAll('.btn');
-    allButtons.forEach(function(button) {
-        button.classList.remove("active");
-    });
-
-    const activeButton = document.getElementById(`${section}-button`);
-    if (activeButton) {
-        activeButton.classList.add("active");
-    }
-
-    switch(section) {
-        case "home":
-            sectionContent.innerHTML = "<h2>Home</h2>";
-            break;
-        case "players":
-            const playersTemplate = document.getElementById("players-section-template");
-            sectionContent.appendChild(playersTemplate.content.cloneNode(true));
-            break;
-        case "calendar":
-            const template = document.getElementById("calendar-section-template");
-            sectionContent.appendChild(template.content.cloneNode(true));
-            break;
-        case "match-history":
-            sectionContent.innerHTML = "<h2>Match history</h2>";
-            break;
-    }
+  switch (section) {
+    case "home":
+      sectionContent.innerHTML = "<h2>Home</h2>";
+      break;
+    case "players":
+      const playersTemplate = document.getElementById(
+        "players-section-template",
+      );
+      sectionContent.appendChild(playersTemplate.content.cloneNode(true));
+      break;
+    case "calendar":
+      const template = document.getElementById("calendar-section-template");
+      sectionContent.appendChild(template.content.cloneNode(true));
+      break;
+    case "match-history":
+      sectionContent.innerHTML = "<h2>Match history</h2>";
+      break;
+  }
 }
