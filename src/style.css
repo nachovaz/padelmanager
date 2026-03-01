@@ -15,32 +15,34 @@
 
 p {}
 h1 {
-    margin: 0;
-    padding-right: 10px;
-    padding-left: 10px;
 }
 h2{}
 h3{}
 
 body {
-    background-color: #03071e;
-    opacity: 1;
-    background-size: 4px 4px;
-    background-image: repeating-linear-gradient(
-        45deg,
-        #727272 0,
-        #727272 0.4px,
-        #03071e 0,
-        #03071e 50%
-    );
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+    grid-template-areas:
+    "h"
+    "m"
+    "f"
+    ;
+    background: #313030;
+    background: linear-gradient(0deg,
+                                rgba(49, 48, 48, 1) 0%,
+                                rgba(87, 199, 133, 1) 35%,
+                                rgba(246, 234, 0, 0.3) 50%,
+                                rgba(87, 199, 133, 1) 65%,
+                                rgba(3, 7, 30, 1) 100%);
     min-height: 100vh;
     margin: 0;
 }
 
+
 table {
     width: 80vw;
     max-width: 1920px;
-    margin: 5em auto;
+    margin:5em auto;
     border-collapse: separate;
     border-spacing: 0;
     background: rgba(205, 205, 204, 1);
@@ -71,25 +73,26 @@ tr:last-child td {
 
 /* Header and Navigation */
 
+header{
+    grid-area: "h";
+}
 
-#header-title {
+.header-title {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #313030;
-    color: #e6e6e6ff;
-    border-bottom: 0px solid #ffffff;
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+    font-size: 1rem;
+    background-color: #313030ff;
+    color: #e6e6e6;
+    padding: 0 0.5em;
+    border-bottom: 1px solid #484848 ;
 }
 
 .nav-bar {
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(49, 48, 48, 0.85);
-    border-bottom: 0px solid #ffffff;
+    border-bottom: 1px solid #484848;
 }
 
 .nav-btn {
@@ -128,22 +131,38 @@ tr:last-child td {
 }
 
 
+
+main{
+    grid-area: "m";
+}
 /* Home Section */
 
 .home-container {
     display: grid;
 }
 
-.home-container h1{
+.home-container h1 {
     font-size: 6rem;
     color: rgb(246, 234, 0);
 }
 
+.home-container h2 {
+    font-size: 3rem;
+    color:  rgb(246, 234, 0);
+}
+
+
+
 /* Footer */
 
 footer{
+    grid-area: "f";
     display: flex;
+    width:100%;
+    min-height: 9em;
     justify-content: center;
     align-items: center;
-    flex-;
+    color: whitesmoke;
+    background-color: #313030;
+    
 }
