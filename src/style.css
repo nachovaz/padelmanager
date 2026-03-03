@@ -152,12 +152,12 @@ tr:last-child td {
 
 header{
     grid-area: "h";
-    display: grid;
-    grid-template: auto auto / repeat(5, 1fr);
-    grid-template-areas:
-    "ht ht ht ht ht"
-    ".. nb nb nb .."
-    ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #313030;
+    height: 60px;
 }
 
 .header-title {
@@ -175,34 +175,23 @@ header{
     grid-area: nb;
     display: flex;
     justify-content: space-evenly;
-    background-color:;
-    box-shadow: 0 40px 40px #4;
+    background-color:transparent;
 }
 
 .nav-btn {
-    display: inline-block;
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
     border: none;
-    border-bottom: 1px solid rgba(230, 230, 230, 0.5);
-    border-top: 1px solid rgba(230, 230, 230, 0.1);
-    height: 4em;
     flex: 1;
     color: #e6e6e6ff;
     font-size: 16px;
     font-weight: bold;
     margin: 0px;
-    padding: 1.5em 4em 1.5em 4em;
-    box-shadow: 0 5px 40px rgba(49, 48, 48, 1);
+    padding: 0 4em;
 }
 
-#players-button{
-    border-bottom-left-radius: 100%;
-    text-align: right;
-}
-#calendar-button{
-    border-bottom-right-radius: 100%;
-    text-align: left;
-}
 
 
 .nav-btn:hover {
@@ -256,6 +245,7 @@ footer{
     grid-area: "f";
     display: flex;
     width:100%;
+    height: 60px;
     min-height: 6vh;
     justify-content: center;
     align-items: center;
