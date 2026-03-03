@@ -13,7 +13,9 @@
 /* Landing page */
 
 .landing-page {
-    background: rgba(49, 48, 48, 1);
+    background: #484848;
+    background-image: url(/assets/loginpagebackground.svg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +24,69 @@
 }
 
 .login-container {
-    background: red;
+    display: flex;
+    flex-direction: column;
+    background:none;
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
 }
+
+.login-h1 , .login-p{
+    color: #e6e6e6ff;
+    margin: 0.3rem auto;
+}
+
+.login-p{
+    margin-bottom: 2rem;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form-field{
+    border: 2px solid #484848;
+    width: 50%;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    margin-bottom: 0.5rem;
+}
+
+.form-field:focus{
+    outline: none;
+    border-color: #e6e6e6;
+    box-shadow: 0 0 1px #e6e6e6;
+}
+.login-submit-btn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    width: 30%;
+    background-color: #f6ea00ff;
+    padding: 0.5em 1em;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-submit-btn:hover{
+    background-color: #e6e6e6;
+}
+
+.link-to-main{
+    color: #e6e6e6ff;
+    text-decoration: underline;
+    margin-top: 1rem;}
+
+
+
 
 /* Global Styles */
 
