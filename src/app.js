@@ -1,3 +1,9 @@
+window.addEventListener("DOMContentLoaded", () => {
+  const homeBtn = document.getElementById("home-button");
+  if (homeBtn) homeBtn.click()
+})
+
+
 function loadSection(section) {
   const sectionContent = document.getElementById("section-content");
   sectionContent.innerHTML = "";

@@ -6,13 +6,19 @@
         <link rel="stylesheet" href="style.css" />
         <title>Pecorino</title>
         <script src="app.js"></script>
+        
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+             integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+             crossorigin="anonymous" 
+             referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
             <nav class="nav-bar">
-                <button class="nav-btn" id="home-button" onclick="loadSection('home')">Home</button>
-                <button class="nav-btn" id="players-button" onclick="loadSection('players')">Players</button>
-                <button class="nav-btn" id="calendar-button" onclick="loadSection('calendar')">Calendar</button>
+                <button class="nav-btn" id="home-button" onclick="loadSection('home')"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="nav-btn" id="players-button" onclick="loadSection('players')"><i class="fa-solid fa-users"></i> Players</button>
+                <button class="nav-btn" id="calendar-button" onclick="loadSection('calendar')"><i class="fa-solid fa-calendar-days"></i> Calendar</button>
             </nav>
             <div class="header-title">
                 <h1>Pecorino</h1>
