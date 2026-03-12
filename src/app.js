@@ -1,4 +1,5 @@
 import { playerData } from "./playerdata.js";
+import { calendarData } from "./calendardata.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -66,12 +67,31 @@ function loadSection(section) {
       break;
     
     case "calendar":
-      const template = document.getElementById("calendar-section-template");
-      sectionContent.appendChild(template.content.cloneNode(true));
-      break;
-    
-    case "match-history":
-      sectionContent.innerHTML = "<h2>Match history</h2>";
+      let calendarTable =
+        `
+          <table class="calendar-data-table">
+              <tr>
+                  <th>Jornada</th>
+                  <th>VS</th>
+                  <th>Fecha</th>
+                  <th>Lugar</th>
+                  <th>Resultado</th>
+              </tr>
+        ` 
+      calendarData.forEach(function (matchup) {    
+        calendarTable +=
+          `
+              <tr>
+                  <td>${matchup.jornada}</td>
+                  <td>${matchup.vs}</td>
+                  <td>${matchup.fecha}</td>
+                  <td>${matchup.lugar}</td>
+                  <td>${matchup.resultado}</td>
+              </tr>
+          `
+      })
+      calendarTable += `</table>`
+      sectionContent.innerHTML = calendarTable
       break;
   }
 }
