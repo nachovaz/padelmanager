@@ -8,7 +8,7 @@ export const playerData = [
   {
     id: 273995,
     name: "DANIEL RODERO RAMOS",
-    playedMatches: 0,
+    playedMatches: 1,
     playoffLocked: false
   },
   {
@@ -20,7 +20,7 @@ export const playerData = [
   {
     id: 365611,
     name: "VICTOR HUGO FERNANDEZ SUAREZ",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
@@ -32,7 +32,7 @@ export const playerData = [
   {
     id: 366158,
     name: "HORACIO ENRIQUE SUAREZ MARTINEZ",
-    playedMatches: 0,
+    playedMatches: 1,
     playoffLocked: false
   },
   {
@@ -50,7 +50,7 @@ export const playerData = [
   {
     id: 369295,
     name: "JAVIER RODRIGUEZ ALIJA",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
@@ -86,13 +86,13 @@ export const playerData = [
   {
     id: 394342,
     name: "GABRIEL ADRIAN DURAND CASTILLO",
-    playedMatches: 1,
+    playedMatches: 2,
     playoffLocked: false
   },
   {
     id: 394568,
     name: "ALBERTO BLANCO IGLESIAS",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
@@ -104,13 +104,13 @@ export const playerData = [
   {
     id: 382130,
     name: "XAVIER REUS FERRES",
-    playedMatches: 1,
+    playedMatches: 2,
     playoffLocked: false
   },
   {
     id: 399273,
     name: "RODRIGO PICO NUÑEZ",
-    playedMatches: 3,
+    playedMatches: 4,
     playoffLocked: true
   },
 ]
