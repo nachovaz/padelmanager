@@ -73,7 +73,7 @@ function loadSection(section) {
               <tr>
                   <th>Jornada</th>
                   <th>VS</th>
-                  <th>Fecha</th>
+                  <th>Fecha/Hora</th>
                   <th>Lugar</th>
                   <th>Resultado</th>
               </tr>
