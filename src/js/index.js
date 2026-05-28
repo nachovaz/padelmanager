@@ -28,8 +28,18 @@ function loadSection(section) {
 
   switch (section) {
     case "home":
-      const homeTemplate = document.getElementById("home-section-template");
-      sectionContent.appendChild(homeTemplate.content.cloneNode(true));
+      sectionContent.innerHTML =
+        `
+        <div id="home-elements-container">
+          <h2>Padel Oviedo B</h2>
+        <div id="time-next-match">
+          <h2>Next match countdown:</h2>
+        </div>
+        <div id="weather-holder">
+          <h2>Weather:</h2>
+        </div>
+       </div>
+        `;
       break;
     
     case "players":

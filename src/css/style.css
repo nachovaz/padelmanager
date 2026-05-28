@@ -30,7 +30,7 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     background: #f3f4f3;
-    border: 2px solid rgba(3,7,30, 0.6);
+    border: 2px solid rgba(3, 7, 30, 0.6);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ th {
     padding: 0.5em 1.5em;
     font-size: 18px;
     font-weight: 600;
-    border-bottom: 2px solid rgba(3,7,30, 0.6);
+    border-bottom: 2px solid rgba(3, 7, 30, 0.6);
 }
 
 tr:last-child td {
@@ -62,7 +62,7 @@ tr:last-child td {
 }
 
 tr:nth-child(even) td {
-    background: rgba(161,204,165, 0.8);
+    background: rgba(161, 204, 165, 0.8);
 }
 
 tr:hover td {
@@ -148,20 +148,30 @@ i.active {
 main {
     grid-area: "m";
 }
-/* Home Section */
 
-.home-container {
-    display: grid;
+#home-elements-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 3em auto;
+    background: hotpink;
 }
 
-.home-container h1 {
-    font-size: 6rem;
-    color: #03071e;
+#home-elements-container h2 {
+    width: 100%;
+    text-align: center;
 }
 
-.home-container h2 {
-    font-size: 3rem;
-    color: #03071e;
+#time-next-match {
+    width: 50%;
+    background: greenyellow;
+}
+
+#weather-holder {
+    width: 50%;
+    background: steelblue;
 }
 
 /* Footer */
