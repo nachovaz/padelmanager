@@ -151,7 +151,7 @@ main {
 
 #home-elements-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -159,21 +159,68 @@ main {
     background: hotpink;
 }
 
-#home-elements-container h2 {
+#home-title {
     width: 100%;
     text-align: center;
+    margin-bottom: 4em;
+}
+
+
+
+#weather-holder {
+    width: 100%;
+    background-color:aquamarine;
+}
+
+.weather-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-; 
+   
+    padding: 1em;
+}
+
+.weather-icon {
+    font-size: 3em;
+    color: #03071e;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.weather-temp {
+    font-size: 2em;
+    font-weight: 700;
+    color: #03071e;
+}
+
+.weather-humidity {
+    font-size: 2em;
+    font-weight: 700;
+    color: #03071e;
+}
+
+.weather-desc{
+    font-size: 2em;
+    color: #03071e;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.weather-error {
+    text-align: center;
+    color: #6b0f1a;
+    font-style: italic;
 }
 
 #time-next-match {
-    width: 50%;
+    width: 100%;
     background: greenyellow;
 }
-
-#weather-holder {
-    width: 50%;
-    background: steelblue;
-}
-
 /* Footer */
 
 footer {
