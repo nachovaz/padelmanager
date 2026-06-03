@@ -21,6 +21,7 @@ body {
         #f2f4f3;
     min-height: 100vh;
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 table {
@@ -155,10 +156,12 @@ main {
     background: hotpink;
 }
 
-#home-title {
-    width: 100%;
+#team-name {
     text-align: center;
-    margin-bottom: 4em;
+    font-weight: 900;
+    font-size: 3em;
+    border: 2px solid black;
+    padding: 0.25em 2em;
 }
 
 #weather-holder {
@@ -166,22 +169,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: 2px solid #03071e;
     background-color: aquamarine;
+    border-radius: 25px;
+    box-sizing: border-box;
 }
 
 #weather-data {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: steelblue;
     width: 100%;
     padding: 1em;
     box-sizing: border-box;
 }
-
-
-
-
 
 .weather-desc,
 .weather-temp,
@@ -201,14 +202,12 @@ main {
 }
 
 .weather-desc {
-    
     text-transform: capitalize;
 }
 
 .weather-icon {
     color: #03071e;
 }
-
 
 .weather-error {
     text-align: center;

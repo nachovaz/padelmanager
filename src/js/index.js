@@ -31,7 +31,7 @@ function loadSection(section) {
       sectionContent.innerHTML =
         `
         <div id="home-elements-container">
-          <h2 id="home-title">Padel Oviedo B</h2>
+          <h2 id="team-name">Padel Oviedo B</h2>
           
           <div id="weather-holder">
             <h2>Weather in Oviedo:</h2>
