@@ -131,14 +131,6 @@ header {
     color: aquamarine;
 }
 
-.vertical-line {
-    border-left: 2px solid #6b0f1a;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: inline-block;
-}
-
 main {
     grid-area: m;
     height: 100%;
@@ -164,10 +156,11 @@ main {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-size: 3.5em;
+    color: #03071e;
     border: 2px solid #03071e;
     background-color: #f2f4f3;
     padding: 0.2em 1em;
-    box-shadow: 4px 4px;
+    box-shadow: 2px 6px 5px #03071e;
     box-sizing: border-box;
 }
 
@@ -181,7 +174,7 @@ main {
     background-color: aquamarine;
     border-radius: 25px;
     box-sizing: border-box;
-    box-shadow: 4px 4px;
+    box-shadow: 2px 6px 5px #03071e;
     padding: 1.5em 2em;
     min-height: 0;
 }
@@ -202,16 +195,22 @@ main {
     margin: 1em;
 }
 
+#weather-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    width: 100%;
+    margin: 1em 0;
+}
+
 #weather-data {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.5em 1em;
-    height: auto;
-    min-height: 5em;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0.5em 0em 0.5em 4em;
     box-sizing: border-box;
-    margin: 3em 0;
+    gap: 0.5em;
 }
 
 .weather-desc,
@@ -219,16 +218,10 @@ main {
 .weather-humidity {
     display: inline-flex;
     align-items: center;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 700;
     color: #03071e;
-    gap: 0.1em;
-}
-
-.temp-humidity-holder {
-    display: flex;
-    gap: 6em;
-    margin-right: 6em;
+    gap: 0.3em;
 }
 
 .weather-desc {
@@ -247,15 +240,16 @@ main {
 
 #game-conditions {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
+    flex: 1;
+    justify-content: center;
+    padding: 0 4em 0 0;
+    gap: 0.5em;
 }
 
 #game-conditions h2 {
-    display: inline-block;
-    width: 40%;
-    font-size: 4em;
+    font-size: 3.5em;
     color: #03071e;
     margin: 0;
     box-sizing: border-box;
@@ -264,7 +258,7 @@ main {
 #ball-liveliness-bar {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
     border: 2px solid #03071e;
     border-radius: 75px;
     overflow: hidden;
@@ -273,16 +267,13 @@ main {
 #liveleness-low,
 #liveleness-normal,
 #liveleness-high {
-    font-size: 3.5em;
+    font-size: 2em;
     font-weight: 700;
     padding: 0.25em 0;
     flex: 1;
     text-align: center;
     color: #03071e;
     border-right: 2px solid #03071e;
-    transition:
-        background-color 0.2s,
-        color 0.2s;
 }
 
 #liveleness-high {
@@ -300,8 +291,10 @@ main {
     flex: 3;
     width: 100%;
     box-sizing: border-box;
-    background: greenyellow;
+    background: #a1cca5;
+    border: 2px solid #03071e;
     border-radius: 25px;
+    box-shadow: 2px 6px 5px #03071e;
     margin: 1em 0;
 }
 

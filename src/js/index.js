@@ -1,5 +1,6 @@
 import { playerData } from "../data/playerdata.js";
 import { calendarData } from "../data/calendardata.js";
+import { BallLiveliness, weatherIcon, weatherDescription } from "./weatherConditions.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const homeBtn = document.getElementById("home-button");
@@ -36,19 +37,22 @@ function loadSection(section) {
           <div id="weather-holder">
             <h2>Conditions</h2>
             <hr />
-            <div id="weather-data"></div>
-            <div id="game-conditions">
-              <h2>Ball liveliness:</h2>
-              <div id="ball-liveliness-bar">
-                <span id="liveleness-low">LOW</span>
-                <span id="liveleness-normal">NORMAL</span>
-                <span id="liveleness-high">HIGH</span>
+            <div id="weather-content-wrapper">
+              <div id="weather-data"></div>
+              <div id="game-conditions">
+                <h2>Ball liveliness:</h2>
+                <div id="ball-liveliness-bar">
+                  <span id="liveleness-low">LOW</span>
+                  <span id="liveleness-normal">NORMAL</span>
+                  <span id="liveleness-high">HIGH</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div id="upcoming-events-holder">
             <h2>Upcoming events:</h2>
+            <ul id="upcoming-events-list"></ul>
           </div>
         </div>
         `;
@@ -129,10 +133,8 @@ function fetchWeather() {
       const weatherDesc = weatherDescription(weather_code);
       document.getElementById("weather-data").innerHTML = `
               <span class="weather-desc"><i class="fa-solid ${icon} weather-icon"></i>${weatherDesc}</span>
-              <span class="temp-humidity-holder">
-                <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature_2m}°C</span>
-                <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relative_humidity_2m}%</span>
-              </span>
+              <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature_2m}°C</span>
+              <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relative_humidity_2m}%</span>
         `;
 
       document
@@ -148,74 +150,4 @@ function fetchWeather() {
       document.getElementById("weather-content").innerHTML =
         `<p class="weather-error">Could not load weather</p>`;
     });
-}
-
-function BallLiveliness(temp, humidity) {
-  if (temp <= 10) {
-    return "low";
-  } else if (temp <= 16) {
-    if (humidity > 70) {
-      return "low";
-    } else {
-      return "normal";
-    }
-  } else if (temp <= 26) {
-    if (humidity > 75) {
-      return "low";
-    } else if (humidity < 35) {
-      return "high";
-    } else {
-      return "normal";
-    }
-  } else if (temp <= 33) {
-    if (humidity > 70) {
-      return "normal";
-    } else {
-      return "high";
-    }
-  } else {
-    if (humidity > 60) {
-      return "normal";
-    } else {
-      return "high";
-    }
-  }
-}
-
-//Función para cambiar el icono según el weather code que obtengamos
-function weatherIcon(code) {
-  switch (true) {
-    case code === 0:
-      return "fa-sun";
-    case code <= 2:
-      return "fa-cloud-sun";
-    case code <= 3:
-      return "fa-cloud";
-    case code <= 48:
-      return "fa-smog";
-    case code <= 67:
-      return "fa-cloud-rain";
-    case code <= 77:
-      return "fa-snowflake";
-    case code <= 82:
-      return "fa-cloud-showers-heavy";
-    case code <= 86:
-      return "fa-snowflake";
-    default:
-      return "fa-cloud-bolt";
-  }
-}
-
-//Función para devolver un texto descriptivo del tiempo
-function weatherDescription(code) {
-  if (code === 0) return "Clear sky";
-  if (code <= 2) return "Partly cloudy";
-  if (code <= 3) return "Overcast";
-  if (code <= 48) return "Foggy";
-  if (code <= 57) return "Drizzle";
-  if (code <= 67) return "Rain";
-  if (code <= 77) return "Snow";
-  if (code <= 82) return "Rain showers";
-  if (code <= 86) return "Snow showers";
-  return "Thunderstorm";
 }
