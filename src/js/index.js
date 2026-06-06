@@ -32,8 +32,6 @@ function loadSection(section) {
     case "home":
       sectionContent.innerHTML = `
         <div id="home-elements-container">
-          <h2 id="team-name">Padel Oviedo B</h2>
-
           <div id="weather-holder">
             <h2>Conditions</h2>
             <hr />
