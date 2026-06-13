@@ -110,7 +110,7 @@ header {
 .nav-bar i {
     color: var(--text-light);
     font-size: 1.5rem;
-    padding: 0 0.5em;
+    padding: 0 1.5em 0 0;
 }
 
 .nav-btn {
@@ -243,6 +243,7 @@ main {
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     line-height: 2em;
     margin: 1em 0;
+    padding: 0 0 0 3em;
 }
 
 .event-vs,
