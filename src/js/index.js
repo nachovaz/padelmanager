@@ -129,16 +129,16 @@ function fetchWeather() {
   )
     .then((res) => res.json())
     .then((data) => {
-      const temperature_2m = data.current.temperature_2m;
-      const relative_humidity_2m = data.current.relative_humidity_2m;
-      const weather_code = data.current.weather_code;
-      const liveliness = BallLiveliness(temperature_2m, relative_humidity_2m);
-      const icon = weatherIcon(weather_code);
-      const weatherDesc = weatherDescription(weather_code);
+      const temperature2m = data.current.temperature_2m;
+      const relativeHumidity2m = data.current.relative_humidity_2m;
+      const weatherCode = data.current.weather_code;
+      const liveliness = BallLiveliness(temperature2m, relativeHumidity2m);
+      const icon = weatherIcon(weatherCode);
+      const weatherDesc = weatherDescription(weatherCode);
       document.getElementById("weather-data").innerHTML = `
               <span class="weather-desc"><i class="fa-solid ${icon} weather-icon"></i>${weatherDesc}</span>
-              <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature_2m}°C</span>
-              <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relative_humidity_2m}%</span>
+              <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature2m}°C</span>
+              <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relativeHumidity2m}%</span>
         `;
 
       document
