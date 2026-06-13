@@ -37,17 +37,17 @@ function loadSection(section) {
       sectionContent.innerHTML = `
         <div id="home-elements-container">
 
-          <div id="weather-holder">
+          <div id="weather-holder" class="dashboard-card">
             <h2 class="card-title">Conditions</h2>
             <div id="weather-data"></div>
           </div>
 
-          <div id="upcoming-events-holder">
+          <div id="upcoming-events-holder" class="dashboard-card">
             <h2 class="card-title">Upcoming events</h2>
             <ul id="upcoming-events-list"></ul>
           </div>
 
-          <div id="game-conditions">
+          <div id="game-conditions" class="dashboard-card">
             <h2 class="card-title">Ball liveliness</h2>
             <div id="ball-liveliness-bar">
               <span id="liveleness-low">LOW</span>
